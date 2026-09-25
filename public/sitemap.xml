@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage Canonical -->
+  <url>
+    <loc>https://shuvendu-dhenki-cv.netlify.app/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- About Shuvendu Dhenki -->
+  <url>
+    <loc>https://shuvendu-dhenki-cv.netlify.app/#about</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- UI/UX & Web Design Portfolio Projects -->
+  <url>
+    <loc>https://shuvendu-dhenki-cv.netlify.app/#projects</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- UI/UX & Mobile App Skills -->
+  <url>
+    <loc>https://shuvendu-dhenki-cv.netlify.app/#skills</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Professional Experience & CV -->
+  <url>
+    <loc>https://shuvendu-dhenki-cv.netlify.app/#experience</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Contact Shuvendu Dhenki -->
+  <url>
+    <loc>https://shuvendu-dhenki-cv.netlify.app/#contact</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

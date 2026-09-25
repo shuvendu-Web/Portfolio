@@ -1,0 +1,540 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #f0f9ff;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f0f9ff;
+  color: #0f172a;
+}
+
+/* ─── Lenis Smooth Scroll Core & Modern Scrollbars ───── */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Sleek Glass Scrollbar for Entire Window */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f9ff;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  border-radius: 9999px;
+  border: 2px solid #f0f9ff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+}
+
+/* ─── Glassmorphism & Neumorphism Utility Design System (Pure Sky Blue) ───── */
+
+/* Soft Neumorphic Glass Card */
+.neu-glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 
+    0 10px 30px -5px rgba(14, 165, 233, 0.12),
+    0 4px 12px -2px rgba(14, 165, 233, 0.05);
+  border-radius: 1.5rem;
+}
+
+/* Interactive Glass Button */
+.neu-glass-button {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.12);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #0369a1;
+}
+
+.neu-glass-button:hover {
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+  border-color: rgba(56, 189, 248, 0.7);
+  background: rgba(240, 249, 255, 0.95);
+  color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.neu-glass-button:active {
+  transform: translateY(0);
+}
+
+/* Primary Vibrant Pure Sky Blue Gradient Button */
+.neu-glass-button-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 100%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neu-glass-button-primary:hover {
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5);
+  transform: translateY(-2px);
+}
+
+.neu-glass-button-primary:active {
+  transform: translateY(0);
+}
+
+/* Glass Inset Input / Textarea */
+.neu-glass-input {
+  background: rgba(240, 249, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: inset 0 2px 4px rgba(14, 165, 233, 0.08);
+  transition: all 0.2s ease;
+  color: #0f172a;
+}
+
+.neu-glass-input:focus {
+  outline: none;
+  border-color: rgba(2, 132, 199, 0.8);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+}
+
+/* Soft Naturally Blended Sky Blue Hero Typography */
+.neu-hero-text {
+  color: rgba(2, 132, 199, 0.18);
+  text-shadow: 
+    -2px -2px 14px rgba(255, 255, 255, 0.65),
+    3px 6px 26px rgba(2, 132, 199, 0.22),
+    0px 12px 40px rgba(14, 165, 233, 0.15);
+}
+
+/* Glass Navbar Container */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.08);
+}
+
+/* ─── Glassmorphism & Neumorphism Hybrid Button System ───── */
+
+.neu-glass-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.65rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Glass specular shine highlight stripe */
+.neu-glass-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 55%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.neu-glass-btn:hover::before {
+  left: 100%;
+}
+
+/* 1. Sky Blue Glassmorphism + Neumorphism (View Projects) */
+.neu-glass-sky {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(224, 242, 254, 0.65));
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-bottom-color: rgba(56, 189, 248, 0.45);
+  border-right-color: rgba(56, 189, 248, 0.35);
+  color: #0369a1;
+  box-shadow: 
+    8px 12px 24px -4px rgba(14, 165, 233, 0.28),
+    -4px -4px 12px 0px rgba(255, 255, 255, 0.95),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(2, 132, 199, 0.1);
+}
+
+.neu-glass-sky:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(224, 242, 254, 0.85));
+  border-color: rgba(255, 255, 255, 0.98);
+  border-bottom-color: rgba(56, 189, 248, 0.65);
+  color: #0284c7;
+  box-shadow: 
+    10px 18px 32px -4px rgba(14, 165, 233, 0.4),
+    -6px -6px 16px 0px rgba(255, 255, 255, 1),
+    0 0 20px rgba(56, 189, 248, 0.4),
+    inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.neu-glass-sky:active {
+  transform: translateY(0);
+  box-shadow: 
+    inset 3px 3px 6px rgba(2, 132, 199, 0.2),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* 2. Telegram Cyan Glassmorphism + Neumorphism (Let's Chat) */
+.neu-glass-cyan {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(224, 247, 250, 0.65));
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-bottom-color: rgba(0, 180, 216, 0.45);
+  border-right-color: rgba(0, 180, 216, 0.35);
+  color: #0077b6;
+  box-shadow: 
+    8px 12px 24px -4px rgba(14, 165, 233, 0.28),
+    -4px -4px 12px 0px rgba(255, 255, 255, 0.95),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(0, 119, 182, 0.1);
+}
+
+.neu-glass-cyan:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(224, 247, 250, 0.85));
+  border-color: rgba(255, 255, 255, 0.98);
+  border-bottom-color: rgba(0, 180, 216, 0.65);
+  color: #0077b6;
+  box-shadow: 
+    10px 18px 32px -4px rgba(14, 165, 233, 0.4),
+    -6px -6px 16px 0px rgba(255, 255, 255, 1),
+    0 0 20px rgba(56, 189, 248, 0.4),
+    inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.neu-glass-cyan:active {
+  transform: translateY(0);
+  box-shadow: 
+    inset 3px 3px 6px rgba(14, 165, 233, 0.2),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* 3. Emerald Mint Glassmorphism + Neumorphism (Download CV) */
+.neu-glass-emerald {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(236, 253, 245, 0.65));
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-bottom-color: rgba(52, 211, 153, 0.45);
+  border-right-color: rgba(52, 211, 153, 0.35);
+  color: #047857;
+  box-shadow: 
+    8px 12px 24px -4px rgba(14, 165, 233, 0.28),
+    -4px -4px 12px 0px rgba(255, 255, 255, 0.95),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(4, 120, 87, 0.1);
+}
+
+.neu-glass-emerald:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(236, 253, 245, 0.85));
+  border-color: rgba(255, 255, 255, 0.98);
+  border-bottom-color: rgba(52, 211, 153, 0.65);
+  color: #047857;
+  box-shadow: 
+    10px 18px 32px -4px rgba(14, 165, 233, 0.4),
+    -6px -6px 16px 0px rgba(255, 255, 255, 1),
+    0 0 20px rgba(56, 189, 248, 0.4),
+    inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.neu-glass-emerald:active {
+  transform: translateY(0);
+  box-shadow: 
+    inset 3px 3px 6px rgba(14, 165, 233, 0.2),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* 4. Official WhatsApp Teal Glassmorphism + Neumorphism (#128c7e) */
+.neu-glass-whatsapp {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(18, 140, 126, 0.25));
+  border: 1.5px solid rgba(255, 255, 255, 0.88);
+  border-bottom-color: rgba(18, 140, 126, 0.45);
+  border-right-color: rgba(18, 140, 126, 0.35);
+  color: #128c7e;
+  box-shadow: 
+    8px 12px 24px -4px rgba(14, 165, 233, 0.28),
+    -4px -4px 12px 0px rgba(255, 255, 255, 0.95),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(18, 140, 126, 0.12);
+}
+
+.neu-glass-whatsapp:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(18, 140, 126, 0.38));
+  border-color: rgba(255, 255, 255, 0.98);
+  border-bottom-color: rgba(18, 140, 126, 0.65);
+  color: #0e6c61;
+  box-shadow: 
+    10px 18px 32px -4px rgba(14, 165, 233, 0.4),
+    -6px -6px 16px 0px rgba(255, 255, 255, 1),
+    0 0 20px rgba(56, 189, 248, 0.4),
+    inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.neu-glass-whatsapp:active {
+  transform: translateY(0);
+  box-shadow: 
+    inset 3px 3px 6px rgba(14, 165, 233, 0.2),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* Custom Glass Scrollbar for Scrollable About Section Cards */
+.glass-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.glass-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 9999px;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* ─── Claymorphism Design System (Tactile 3D Soft Clay) ───── */
+
+.clay-container {
+  background: #ffffff;
+  border-radius: 2.25rem;
+  box-shadow: 
+    16px 24px 40px -6px rgba(0, 0, 0, 0.08),
+    inset -8px -8px 16px rgba(0, 0, 0, 0.04),
+    inset 8px 8px 16px rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(255, 255, 255, 0.85);
+}
+
+.clay-card {
+  border-radius: 1.75rem;
+  transition: all 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 
+    12px 16px 28px rgba(0, 0, 0, 0.08),
+    inset -6px -6px 12px rgba(0, 0, 0, 0.08),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.9);
+  border: 2.5px solid rgba(255, 255, 255, 0.75);
+}
+
+.clay-card:hover {
+  transform: translateY(-5px) scale(1.025);
+  box-shadow: 
+    16px 22px 34px rgba(0, 0, 0, 0.12),
+    inset -7px -7px 14px rgba(0, 0, 0, 0.1),
+    inset 7px 7px 14px rgba(255, 255, 255, 1);
+}
+
+.clay-badge {
+  border-radius: 9999px;
+  box-shadow: 
+    5px 7px 14px rgba(0, 0, 0, 0.07),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.08),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.clay-badge:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 
+    7px 10px 18px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 8px rgba(0, 0, 0, 0.1),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.98);
+}
+
+.clay-button-active {
+  box-shadow: 
+    inset 4px 5px 10px rgba(0, 0, 0, 0.15),
+    inset -4px -5px 10px rgba(255, 255, 255, 0.7);
+  transform: translateY(1px);
+}
+
+/* User Specified Clay Hex Palette Mapping */
+/* 1. #99C2FF (Soft Blue Clay) */
+.clay-blue {
+  background-color: #99C2FF;
+  color: #0f2b66;
+}
+/* 2. #FFEFE3 (Cream Peach Clay) */
+.clay-peach {
+  background-color: #FFEFE3;
+  color: #7c2d12;
+}
+/* 3. #FFDF82 (Warm Yellow Clay) */
+.clay-yellow {
+  background-color: #FFDF82;
+  color: #713f12;
+}
+/* 4. #FF84BA (Vibrant Pink Clay) */
+.clay-pink {
+  background-color: #FF84BA;
+  color: #701a40;
+}
+/* 5. #CFECF3 (Soft Ice Cyan Clay) */
+.clay-cyan {
+  background-color: #CFECF3;
+  color: #0e4555;
+}
+/* 6. #DAF9DE (Pastel Mint Clay) */
+.clay-mint {
+  background-color: #DAF9DE;
+  color: #114b25;
+}
+/* 7. #F6FFDC (Soft Lime Clay) */
+.clay-lime {
+  background-color: #F6FFDC;
+  color: #365314;
+}
+
+/* ─── Ultra Glossy Liquid Glassmorphism Badges ───── */
+.liquid-glass-badge {
+  --glow-rgb: 14, 165, 233;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.5) 45%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  backdrop-filter: blur(16px) saturate(190%);
+  -webkit-backdrop-filter: blur(16px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 4px 16px -2px rgba(var(--glow-rgb), 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(var(--glow-rgb), 0.12);
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.liquid-glass-badge::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.85) 50%,
+    transparent 55%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.liquid-glass-badge:hover::before {
+  left: 100%;
+}
+
+.liquid-glass-badge:hover {
+  transform: translateY(-3px) scale(1.07);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.72) 45%,
+    rgba(255, 255, 255, 0.94) 100%
+  );
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 
+    0 10px 28px 0px rgba(var(--glow-rgb), 0.45),
+    0 0 20px rgba(var(--glow-rgb), 0.35),
+    inset 0 2.5px 5px rgba(255, 255, 255, 1);
+}
+
+/* ─── #8CC0EB and #CFECF3 Gradient Headline Effect (Clean, No Border, No Neumorphism) ───── */
+.clay-headline-multicolor {
+  background: linear-gradient(135deg, #0f2b66 0%, #8CC0EB 45%, #CFECF3 80%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  outline: none;
+  letter-spacing: -0.02em;
+}
+
+.clay-text-shadow {
+  text-shadow: 
+    -2px -2px 0px rgba(255, 255, 255, 0.95),
+    3px 4px 0px rgba(15, 43, 102, 0.2),
+    5px 8px 16px rgba(14, 165, 233, 0.18);
+}
+
+/* ─── Mobile Gallery Marquee Animation ───── */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 30s) linear infinite;
+}
+
+
+
+

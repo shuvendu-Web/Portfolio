@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- PWA & Mobile App Meta Tags -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284c7" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Shuvendu" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Shuvendu Dhenki" />
+  <meta name="keywords" content="Shuvendu Dhenki, Shuvendu, Shuvendu Dhenki CV, Shuvendu Dhenki portfolio, Shuvendu designer, UI UX Designer, UI UX Designer India, Web Designer, Website Designer, Mobile App Designer, Mobile App UI UX Designer, UI UX & Web Designer" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Shuvendu Dhenki | UI/UX Designer, Web & Mobile App Designer</title>
+  <meta name="title" content="Shuvendu Dhenki | UI/UX Designer, Web & Mobile App Designer" />
+  <meta name="description"
+    content="Shuvendu Dhenki is a UI/UX designer specializing in website design, web design, mobile app design, user experience, user interfaces and digital products." />
+  <link rel="canonical" href="https://shuvendu-dhenki-cv.netlify.app/" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shuvendu Dhenki CV & Portfolio" />
+  <meta property="og:url" content="https://shuvendu-dhenki-cv.netlify.app/" />
+  <meta property="og:title" content="Shuvendu Dhenki | UI/UX Designer, Web & Mobile App Designer" />
+  <meta property="og:description"
+    content="Shuvendu Dhenki is a UI/UX designer specializing in website design, web design, mobile app design, user experience, user interfaces and digital products." />
+  <meta property="og:image" content="https://shuvendu-dhenki-cv.netlify.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://shuvendu-dhenki-cv.netlify.app/" />
+  <meta property="twitter:title" content="Shuvendu Dhenki | UI/UX Designer, Web & Mobile App Designer" />
+  <meta property="twitter:description"
+    content="Shuvendu Dhenki is a UI/UX designer specializing in website design, web design, mobile app design, user experience, user interfaces and digital products." />
+  <meta property="twitter:image" content="https://shuvendu-dhenki-cv.netlify.app/og-image.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Schema.org Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shuvendu Dhenki",
+      "url": "https://shuvendu-dhenki-cv.netlify.app/",
+      "jobTitle": "UI/UX Designer, Web & Mobile App Designer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CodeClouds Pvt. Ltd."
+      },
+      "sameAs": [
+        "https://linkedin.com/in/shuvendu-dhenki-1b734b8a",
+        "https://github.com/shuvendu-Web"
+      ],
+      "knowsAbout": [
+        "UI/UX Design",
+        "Website Design",
+        "Web Design",
+        "Mobile App Design",
+        "User Interface Design",
+        "User Experience",
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "description": "Shuvendu Dhenki is a UI/UX designer specializing in website design, web design, mobile app design, user experience, user interfaces and digital products."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Shuvendu Dhenki CV & Portfolio",
+      "url": "https://shuvendu-dhenki-cv.netlify.app/",
+      "author": {
+        "@type": "Person",
+        "name": "Shuvendu Dhenki"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Shuvendu Dhenki — UI/UX & Web Design",
+      "url": "https://shuvendu-dhenki-cv.netlify.app/",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressCountry": "India"
+      }
+    }
+  ]
+  </script>
+</head>
+
+<body class="bg-[#0f172a] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(err => {
+          console.log('SW registration error:', err);
+        });
+      });
+    }
+  </script>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

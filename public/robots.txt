@@ -1,0 +1,6 @@
+# Allow crawling of all content
+User-agent: *
+Allow: /
+
+# Direct Googlebot and other crawlers to the XML sitemap
+Sitemap: https://shuvendu-dhenki-cv.netlify.app/sitemap.xml
